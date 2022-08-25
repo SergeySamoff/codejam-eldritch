@@ -1,5 +1,3 @@
-let brown = 21;
-
 /*const ancientsData = [
     {
         id: 'azathoth',
@@ -416,6 +414,28 @@ const brownCardsAzathoth = brownCardsData.slice(0, 9); {
 }
 shuffle()
 
+const greenCardsAzathoth1 = greenCardsAzathoth.slice(0, 1);
+const greenCardsAzathoth2 = greenCardsAzathoth.slice(1, 5);
+const greenCardsAzathoth3 = greenCardsAzathoth2.slice(0, 2);
+const greenCardsAzathoth4 = greenCardsAzathoth2.slice(2, 4);
+
+const blueCardsAzathoth1 = blueCardsAzathoth.slice(0, 1);
+const blueCardsAzathoth2 = blueCardsAzathoth.slice(1, 2);
+
+const brownCardsAzathoth1 = brownCardsAzathoth.slice(0, 2);
+const brownCardsAzathoth2 = brownCardsAzathoth.slice(2, 9);
+const brownCardsAzathoth3 = brownCardsAzathoth2.slice(0, 3);
+const brownCardsAzathoth4 = brownCardsAzathoth2.slice(3, 7);
+
+const firstStageAzatoth = [...greenCardsAzathoth1, ...blueCardsAzathoth1, ...brownCardsAzathoth1]
+
+const secondStageAzatoth = [...greenCardsAzathoth3, ...blueCardsAzathoth2, ...brownCardsAzathoth3]
+
+const thirthStageAzatoth = [...greenCardsAzathoth4, ...brownCardsAzathoth4]
+
+console.log(firstStageAzatoth);
+console.log(secondStageAzatoth);
+console.log(thirthStageAzatoth);
 
 /*greenCardsData.forEach(grCards => console.log(grCards));
 
