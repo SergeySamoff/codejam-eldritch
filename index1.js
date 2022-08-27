@@ -427,17 +427,66 @@ const brownCardsAzathoth2 = brownCardsAzathoth.slice(2, 9);
 const brownCardsAzathoth3 = brownCardsAzathoth2.slice(0, 3);
 const brownCardsAzathoth4 = brownCardsAzathoth2.slice(3, 7);
 
-const firstStageAzatoth = [...greenCardsAzathoth1, ...blueCardsAzathoth1, ...brownCardsAzathoth1]
+const firstStageAzatoth = [...greenCardsAzathoth1, ...blueCardsAzathoth1, ...brownCardsAzathoth1]; {
+    function buffle() {
+        let j, temp;
+        for (let i = firstStageAzatoth.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            temp = firstStageAzatoth[j];
+            firstStageAzatoth[j] = firstStageAzatoth[i];
+            firstStageAzatoth[i] = temp;
+        }
+        return firstStageAzatoth;
+    }
+}
+buffle()
 
-const secondStageAzatoth = [...greenCardsAzathoth3, ...blueCardsAzathoth2, ...brownCardsAzathoth3]
+const secondStageAzatoth = [...greenCardsAzathoth3, ...blueCardsAzathoth2, ...brownCardsAzathoth3]; {
+    function guffle() {
+        let j, temp;
+        for (let i = secondStageAzatoth.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            temp = secondStageAzatoth[j];
+            secondStageAzatoth[j] = secondStageAzatoth[i];
+            secondStageAzatoth[i] = temp;
+        }
+        return secondStageAzatoth;
+    }
+}
+guffle()
 
-const thirthStageAzatoth = [...greenCardsAzathoth4, ...brownCardsAzathoth4]
+const thirthStageAzatoth = [...greenCardsAzathoth4, ...brownCardsAzathoth4]; {
+    function ruffle() {
+        let j, temp;
+        for (let i = thirthStageAzatoth.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            temp = thirthStageAzatoth[j];
+            thirthStageAzatoth[j] = thirthStageAzatoth[i];
+            thirthStageAzatoth[i] = temp;
+        }
+        return thirthStageAzatoth;
+    }
+}
+ruffle()
 
-console.log(firstStageAzatoth);
-console.log(secondStageAzatoth);
-console.log(thirthStageAzatoth);
+const allCards = [...firstStageAzatoth, ...secondStageAzatoth, ...thirthStageAzatoth]
+console.log(allCards);
 
-/*greenCardsData.forEach(grCards => console.log(grCards));
+const currentCard = document.querySelector('.current__card')
+document.querySelector(".card__shirt").onclick = function () {
+    currentCard.style.backgroundImage = allCards[i];
+    let i = 0;
+    i++;
+    if (i >= allCards.length) {
+        i = 0;
+    }
+}
+
+console.log(allCards[i]);
+
+/*показать текущую картинку
+показать число картинок в этапе
+greenCardsData.forEach(grCards => console.log(grCards));
 
 const ancientsGreenCards = greenCardsData
     .map(greenCards => {
@@ -465,4 +514,16 @@ container.forEach((el, indx) => {
     }
    })  
 })
+
+arr = [...shuffle(easy),...shuffle(normal)]
+arr.length = skolka_nuzhno
+
+Удаляете выпавшую карту из массива, чекаете ее цвет, если цвет зеленый,
+ то зеленый кружок -1 и т.д. Когда зеленый кружок первой стадии становится 0, начинаете отнимать у зеленого кружка второй стадии и т.д.
+
+ Хм. Со сложностью смысл какой.  На очень легком нужно взять из колоды ВСЕ карты со снежинками и посчитать их, если их меньше, 
+ чем нужно для древнего, тогда добераем из простых карт. Там карт хватает для всех сложностей.
+
+ Для примера: нам нужно всего 6 зеленых. В общей колоде у нас, для примера, есть 4 с снежинками(легких) и 4 обычных. Если сложность очень легкая - берем все легкие, их 4,  и добераем до 6 необходимых карт еще 2 случайные карты из обычных. 
+ Если сложность легкая - берем колоду из 4 легких(с снежинкой) и 4 обычных карты и из них случайно выбераем 6 карт
 */

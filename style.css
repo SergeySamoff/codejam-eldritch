@@ -34,6 +34,11 @@ body {
     width: 200px;
 }
 
+.ancient-card:active {
+    border-style: solid;
+    border-color: red;
+}
+
 .difficulty-container {
     display: flex;
     flex-direction: column;
@@ -49,4 +54,85 @@ body {
     gap: 20px;
     justify-content: center;
     min-width: 30%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    width: 140px;
+    height: 30px;
+    background-color: blueviolet;
+    border-radius: 10px;
+}
+
+p {
+    color: white;
+}
+
+.card__shirt {
+    width: 170px;
+    height: 250px;
+    border-radius: 20px;
+    background-size: cover;
+    background-image: url(./assets/mythicCardBackground.png);
+}
+
+.card__shirt:active {
+    width: 165px;
+    height: 245px;
+    background-size: cover;
+}
+
+.current__card {
+    width: 170px;
+    height: 250px;
+    border-radius: 20px;
+    background-size: cover;
+    background-image: url(./assets/MythicCards/brown/brown17.png);
+}
+
+.first__stage {
+    display: flex;
+    gap: 30px;
+}
+
+.second__stage {
+    display: flex;
+    gap: 30px;
+}
+
+.third__stage {
+    display: flex;
+    gap: 30px;
+}
+
+.cards {
+    display: flex;
+    gap: 5px;
+}
+
+.green__cards {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: green;
+    text-align: center;
+}
+
+.brown__cards {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: brown;
+    text-align: center;
+}
+
+.blue__cards {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: blue;
+    text-align: center;
 }
