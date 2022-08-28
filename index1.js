@@ -455,7 +455,7 @@ document.querySelector(".card__shirt").onclick = function () {
     i++; i >= allCards.length;
     return (allCards[i]);
 }
-
+console.log(allCards[i].cardFace);
 currentCard.style.backgroundImage = `url(${url})`;
 
 const cardShirtButton = document.querySelector(".card__shirt");
@@ -482,6 +482,7 @@ cardShirtButton.addEventListener('click', (event) => {
     console.log(counter.count);
 })
 
+console.log("I trued:-(");
 /*const ancientsGreenCards = greenCardsData
     .map(greenCards => {
         return ;
