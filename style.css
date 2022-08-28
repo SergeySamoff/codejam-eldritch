@@ -1,0 +1,137 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.App {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    gap: 20px;
+    height: 100vh;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.ancients-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-width: 40%;
+    padding: 20px;
+}
+
+.ancients-container .ancient-card {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 260px;
+    width: 200px;
+}
+
+.ancient-card:active {
+    border-style: solid;
+    border-color: red;
+}
+
+.difficulty-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100vh;
+    justify-content: center;
+}
+
+.deck-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    min-width: 30%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    width: 140px;
+    height: 30px;
+    background-color: blueviolet;
+    border-radius: 10px;
+}
+
+p {
+    color: white;
+}
+
+.card__shirt {
+    width: 170px;
+    height: 250px;
+    border-radius: 20px;
+    background-size: cover;
+    background-image: url(./assets/mythicCardBackground.png);
+}
+
+.card__shirt:active {
+    width: 165px;
+    height: 245px;
+    background-size: cover;
+}
+
+.current__card {
+    width: 170px;
+    height: 250px;
+    border-radius: 20px;
+    background-size: cover;
+}
+
+.first__stage {
+    display: flex;
+    gap: 30px;
+}
+
+.second__stage {
+    display: flex;
+    gap: 30px;
+}
+
+.third__stage {
+    display: flex;
+    gap: 30px;
+}
+
+.cards {
+    display: flex;
+    gap: 5px;
+}
+
+.green__cards {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: green;
+    text-align: center;
+}
+
+.brown__cards {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: brown;
+    text-align: center;
+}
+
+.blue__cards {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: blue;
+    text-align: center;
+}
