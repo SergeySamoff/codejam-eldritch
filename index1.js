@@ -453,9 +453,10 @@ let i = 0;
 let url = allCards[i].cardFace;
 document.querySelector(".card__shirt").onclick = function () {
     i++; i >= allCards.length;
-    return (allCards[i]);
+    /*return (allCards[i]);*/
+    console.log(allCards[i].cardFace);
 }
-console.log(allCards[i].cardFace);
+
 currentCard.style.backgroundImage = `url(${url})`;
 
 const cardShirtButton = document.querySelector(".card__shirt");
@@ -479,7 +480,6 @@ const Counter = function () {
 const counter = new Counter();
 cardShirtButton.addEventListener('click', (event) => {
     counter.increase()
-    console.log(counter.count);
 })
 
 console.log("I trued:-(");
